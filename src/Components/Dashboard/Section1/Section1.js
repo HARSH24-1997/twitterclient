@@ -12,6 +12,7 @@ function Section1() {
             <h6><span>expired tweets</span></h6>
             <Card/>
             <Card/>
+            <Card/>
         </div>
     )
 }

@@ -4,41 +4,53 @@ import Avatar from "../../../Images/avatar.svg";
 function Section3() {
     return (
         <>
-        <div className="container border " style={{height:"75%",width:"100%"}}>
-            <img src={Avatar} style={{height:"25vh",width:"20vw"}}></img>
-            <center>
-                <h1 className="mx-auto">Name</h1></center>
-           <center> <small>Online</small></center>
-            <div className="row"  style={{ display: "flex" }}>
-                <button>call</button>
-                <button>mobile</button>
-            </div>
+            <div className="container-fluid border " style={{ height: "75%", borderRadius: "10px" }}>
+                <div className="pt-4">
+                    <img src={Avatar} style={{ height: "20vh", width: "20vw" }}></img>
+                </div>
+                <center>
+                    <h3 className="mx-auto">Name</h3></center>
+                <center> <small className="text-muted">Online</small></center>
 
-            <div className="clearfix" style={{display:"flex"}}>
-                    <span className="float-left">Room</span>
-                    <span className="float-right">102</span>
-            </div>
-            <div className="clearfix" style={{ display: "flex" }}>
-                <div className="float-right">
-                    Standard
+                <div className="px-5 py-2 d-flex justify-content-between">
+                    <button className="rounded-pill btn btn-outline-primary">{' '} Call {' '}</button>
+                    <button className="rounded-pill btn btn-outline-primary">Mobile</button>
                 </div>
-                <div className="float-left">
-                     Category
+
+                <div className="px-5 py-2 d-flex justify-content-between" >
+                    <div className="float-left text-muted">Room</div>
+                    <div className="float-right ">102</div>
                 </div>
-            </div>
-            <div className="clearfix" style={{ display: "flex" }}>
-                <div className="float-right">
-                    India
+                <div className="px-5 py-2 d-flex justify-content-between" >
+                    <div className="float-left text-muted">Category</div>
+                    <div className="float-right ">Standard</div>
                 </div>
-                <div className="float-left">
-                    Country
+                <div className="px-5 py-2 d-flex justify-content-between" >
+                    <div className="float-left text-muted">Country</div>
+                    <div className="float-right ">Canada</div>
                 </div>
             </div>
-        </div>
-        <div className="container border" style={{height:"25%"}}>
-            <small>Task</small>
-            <h1>Hello</h1>
-        </div>
+            <div className="container border" style={{ height: "25%", borderRadius: "10px" }}>
+                <small >Task</small>
+                <div className="form-check pt-2" >
+                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className="form-check-label" for="defaultCheck1">
+                        Clean the Room
+                    </label>
+                </div>
+                <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className="form-check-label" for="defaultCheck1">
+                        Call Customer care
+                 </label>
+                </div>
+                <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className="form-check-label" for="defaultCheck1">
+                        Change the Tower and bedsheets.
+                    </label>
+                </div>
+            </div>
         </>
     )
 }

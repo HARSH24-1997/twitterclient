@@ -3,7 +3,7 @@ import Avatar from "../../Images/avatar.svg";
 
 function TweetCard() {
     return (
-        <div className="container border" >
+        <div className="container border" style={{borderRadius:"10px"}}>
         <span className="clearfix" style={{display:"flex"}}>
             <span className="float-left py-2">
                 <img src={Avatar} style={{height:"3.5vh",width:"3.5vw"}}/>
