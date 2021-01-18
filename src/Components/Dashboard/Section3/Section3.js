@@ -1,15 +1,21 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Avatar from "../../../Images/avatar.svg";
 
-function Section3() {
+function Section3({Data}) {
+
+    useEffect(() => {
+        console.log(Data);
+    }, [Data])
+
     return (
         <>
             <div className="container-fluid border " style={{ height: "75%", borderRadius: "10px" }}>
                 <div className="pt-4">
-                    <img src={Avatar} style={{ height: "20vh", width: "20vw" }}></img>
+                 {  Data===undefined?<div></div>:<img src={Data.user.profile_image_url} style={{ height: "20vh", width: "20vw",borderRadius:'60%' }}></img>}
                 </div>
                 <center>
-                    <h3 className="mx-auto">Name</h3></center>
+                {  Data===undefined?<div></div>:<h3 className="mx-auto"><b>{Data.user.name}</b></h3>}
+                </center>
                 <center> <small className="text-muted">Online</small></center>
 
                 <div className="px-5 py-2 d-flex justify-content-between">

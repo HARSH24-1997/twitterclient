@@ -1,18 +1,18 @@
 import Homepage from "./Pages/Homepage";
 import Auth from "./Pages/Auth";
 import End from "./Pages/End"; 
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter , Switch, Route} from "react-router-dom";
 import './App.css';
 
 function App() {
   return (
-   <Router>
+   <BrowserRouter >
      <Switch>
-       <Route exact to="/" component={Auth}/>
-       <Route to="/logincomplete" component={End}/>
-       <Route to="/home" component={Homepage}/>
+       <Route exact path="/" component={Auth}/>
+       <Route exact path="/logincomplete" component={End}/>
+       <Route  exact path="/home" component={Homepage}/>
      </Switch>
-   </Router>
+   </BrowserRouter >
   );
 }
 

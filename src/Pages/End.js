@@ -3,14 +3,11 @@ import Loader from "../Components/Utils/Loader";
 import { useParams, useHistory } from "react-router-dom";
 
 function End(props) {
-
-    console.log(props);
-    // let { data } = useParams();
     let history = useHistory();
 
 
     useEffect(() => {
-        const { token, tokenSecret, screen_name, profile_image_url, name } = props.match.params;
+        const [, token, tokenSecret, screen_name, profile_image_url, name] = props.location.search.split('&')
         sessionStorage.setItem("token", token)
         sessionStorage.setItem("tokenSecret", tokenSecret)
         sessionStorage.setItem("screen_name", screen_name)

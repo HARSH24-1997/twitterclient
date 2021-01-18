@@ -8,7 +8,7 @@ function Header() {
                 <span className="ml-auto px-5"><small className="underline">Update</small></span>
                 <div className=" clearfix mr-auto px-5">
                     <span className="px-5"><small>Session: 45min</small></span>
-                    <span className="px-5"><small>Username: Harsh</small></span>
+                    <span className="px-5"><small>Username : {sessionStorage.getItem("screen_name")}</small></span>
                 </div>
             </nav>
             <nav className="navbar navbar-expand-lg navbar-light" >
